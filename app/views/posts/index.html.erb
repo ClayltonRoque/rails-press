@@ -11,4 +11,7 @@
   <div id="posts" class="min-w-full">
     <%= render @posts %>
   </div>
+    <% @posts.each do |post| %>
+    <%= render(App::Post::CardComponent.new(post: post)) %>
+    <% end %>
 </div>
