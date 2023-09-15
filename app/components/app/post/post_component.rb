@@ -5,6 +5,6 @@ module App
             def initialize(post:)
                 @post = post
             end
-        end 
+        end
     end
 end

@@ -95,6 +95,13 @@ GEM
     diff-lcs (1.5.0)
     e2mmap (0.1.0)
     erubi (1.12.0)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
+    faker (3.2.1)
+      i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
     globalid (1.2.0)
       activesupport (>= 6.1)
@@ -219,11 +226,15 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.29.0)
       parser (>= 3.2.1.0)
-    ruby-lsp (0.9.4)
+    ruby-lsp (0.10.1)
       language_server-protocol (~> 3.17.0)
       sorbet-runtime
       syntax_tree (>= 6.1.1, < 7)
-      yarp (>= 0.9, < 0.11)
+      yarp (>= 0.11, < 0.12)
+    ruby-lsp-rails (0.2.5)
+      rails (>= 6.0)
+      ruby-lsp (>= 0.10.0, < 0.11.0)
+      sorbet-runtime (>= 0.5.9897)
     ruby-progressbar (1.13.0)
     ruby-vips (2.1.4)
       ffi (~> 1.12)
@@ -256,7 +267,7 @@ GEM
       thor (~> 1.0)
       tilt (~> 2.0)
       yard (~> 0.9, >= 0.9.24)
-    sorbet-runtime (0.5.11010)
+    sorbet-runtime (0.5.11016)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -299,10 +310,11 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (3.3.1)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     yard (0.9.34)
-    yarp (0.10.0)
+    yarp (0.11.0)
     zeitwerk (2.6.11)
 
 PLATFORMS
@@ -312,13 +324,15 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  factory_bot_rails (~> 6.2)
+  faker (~> 3.2, >= 3.2.1)
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
   pry-rails
   puma (~> 5.0)
   rails (~> 7.0.7, >= 7.0.7.2)
-  ruby-lsp
+  ruby-lsp-rails (~> 0.2.5)
   sassc-rails
   selenium-webdriver
   solargraph
@@ -331,6 +345,7 @@ DEPENDENCIES
   view_component
   web-console
   webdrivers
+  will_paginate (~> 3.1)
 
 RUBY VERSION
    ruby 3.0.6p216

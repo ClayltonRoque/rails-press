@@ -64,7 +64,13 @@ group :development do
   # https://github.com/pry/pry-rails
   gem 'pry-rails'
 
-  gem "ruby-lsp", require: false
+  gem 'ruby-lsp-rails', '~> 0.2.5'
+
+  gem 'factory_bot_rails', '~> 6.2'
+
+  gem 'will_paginate', '~> 3.1'
+
+  gem 'faker', '~> 3.2', '>= 3.2.1'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
