@@ -70,6 +70,10 @@ group :development do
 
   gem 'will_paginate', '~> 3.1'
 
+  gem 'devise', '~> 4.9', '>= 4.9.2'
+
+  gem "devise-tailwindcssed"
+
   gem 'faker', '~> 3.2', '>= 3.2.1'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
