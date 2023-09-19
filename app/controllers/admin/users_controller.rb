@@ -1,4 +1,5 @@
-class Admin::UsersController < Admin::AdminController
+module Admin
+class UsersController < AdminController
   before_action :set_user, only: %i[ show edit update destroy ]
 
   # GET /admin/users or /admin/users.json
@@ -10,7 +11,7 @@ class Admin::UsersController < Admin::AdminController
   def show
   end
 
-  # GET /admin/users/new
+  # GET /admin/users/new./
   def new
     @user = User.new
   end
@@ -26,10 +27,8 @@ class Admin::UsersController < Admin::AdminController
     respond_to do |format|
       if @user.save
         format.html { redirect_to admin_user_url(@user), notice: "User was successfully created." }
-        format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -39,10 +38,8 @@ class Admin::UsersController < Admin::AdminController
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to admin_user_url(@user), notice: "User was successfully updated." }
-        format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -53,7 +50,6 @@ class Admin::UsersController < Admin::AdminController
 
     respond_to do |format|
       format.html { redirect_to admin_users_url, notice: "User was successfully destroyed." }
-      format.json { head :no_content }
     end
   end
 
@@ -67,4 +63,6 @@ class Admin::UsersController < Admin::AdminController
     def user_params
       params.require(:user).permit(:email, :password, :password_confirmation)
     end
+end
+
 end
