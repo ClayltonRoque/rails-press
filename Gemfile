@@ -76,6 +76,8 @@ group :development do
 
   gem 'faker', '~> 3.2', '>= 3.2.1'
 
+  gem "pundit", "~> 2.3"
+
   gem 'htmlbeautifier'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]

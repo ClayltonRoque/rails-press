@@ -23,7 +23,7 @@
       <% if user_signed_in? %>
       <div class="flex items-center gap-4">
         <div class="font-bold">
-          <%= current_user.email %>
+         <%= link_to current_user.email, admin_profile_index_path %>
         </div>
         <%= link_to 'Logout', destroy_user_session_path, class: 'btn btn-ghost', data: { "turbo-method": :delete } %>
       </div>

@@ -5,6 +5,8 @@ class Post < ApplicationRecord
     archived: 2,
     inappropriate: 3
   }
+   belongs_to :user
+
   has_rich_text :body
 
   has_one_attached :media do |attachable|

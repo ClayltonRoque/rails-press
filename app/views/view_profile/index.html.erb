@@ -1,0 +1,17 @@
+<div class="w-full">
+  <div class="flex justify-between items-center">
+    <%= link_to 'New post', new_post_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
+  <div class='flex flex-row flex-wrap justify-center gap-4 mt-4'>
+    <% @posts.each do |post| %>
+      <%= render(App::Post::CardComponent.new(post: post)) %>
+    <% end %>
+  </div>
+  <div class="text-center mt-6 my-4">
+    <div role="navigation" aria-label="Pagination" class="px-3 py-2 mx-2 text-gray-700 no-underline bg-white rounded-lg">
+      <div class="py-4">
+        <%= will_paginate @posts %>
+      </div>
+    </div>
+  </div>
+</div>
