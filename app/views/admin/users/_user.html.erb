@@ -4,6 +4,28 @@
     <%= user.email %>
   </p>
 
+  <p class="my-5">
+    <strong class="block font-medium mb-1">FirstName:</strong>
+    <%= user.first_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">FirstName:</strong>
+    <%= user.last_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">FirstName:</strong>
+    <%= user.role %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">FirstName:</strong>
+    <%= user.status %>
+  </p>
+
+
+
   <% if action_name != "show" %>
     <%= link_to "Show this user", admin_user_path(user), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to 'Edit this user', edit_admin_user_path(user), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
